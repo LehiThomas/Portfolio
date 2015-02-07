@@ -1,0 +1,46 @@
+$(function() { 
+            $.ajax({
+                url:'http://calendar.byui.edu/RSSFeeds.aspx?data=YRwzz3g4fxe%2brZLG8I2Sb450TiMpL8ge',
+                dataType:'xml',
+                type:'GET',
+                success:function(xml) {
+                    $(xml).find('item').each(function() {
+                        var title = $(this).find("title").text(); 
+                        var des = $(this).find("description").text();
+                        var link = $(this).find("link").text();
+                        var $des = $('<div class="linkitem"></div>').html(des);
+                        var $link = $('<a></a>').attr('href',link).attr('target','_blank').html(title);
+                        var pubDate = new Date($(this).find("pubDate").text()); 
+                        var day = pubDate.getDate();
+                        var month = pubDate.getMonth();
+                        var year = pubDate.getFullYear();
+
+                        var months = new Array(12);
+                            months[0] = "Jan";
+                            months[1] = "Feb";
+                            months[2] = "Mar";
+                            months[3] = "Apr";
+                            months[4] = "May";
+                            months[5] = "Jun";
+                            months[6] = "Jul";
+                            months[7] = "Aug";
+                            months[8] = "Sept";
+                            months[9] = "Oct";
+                            months[10] = "Nov";
+                            months[11] = "Dec";
+
+                        var date = months[month] + ' ' + day + ' ';// + ' | ';
+                        var $date = $('<span class="alumni-date"></span>').text(date)    //change span to div to place date on it's own line
+                        var wrapper = "<li class='list-group-item'>";
+                        $(".feed-container").append($(wrapper).append($date, $link));//, $des));                   
+                    })
+
+                },
+                error:function() {
+                    var des = "Error, unable to retrieve events. Click Alumni Events to go to the calendar."
+                    var $des = $('<div class="linkitem"></div>').html(des);
+                    var wrapper = "<li class='list-group-item'>";
+                    $(".feed-container").append($(wrapper).append($des));  
+                }
+            });
+        });
