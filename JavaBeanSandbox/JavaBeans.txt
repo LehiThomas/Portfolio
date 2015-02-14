@@ -1,5 +1,6 @@
 I had a problem when I first started studying Java Beans. 
 I couldn't get my head around what exactly it is because I was over thinking it.
+I Java Bean takes multiple objects and combines them into 1 object (or bean).
 A Java Bean is simply a Java class that does 3 things:
 
   1. Implements the Serializable interface - To save the state of an object
@@ -12,4 +13,4 @@ Advantages include:
   - Auxiliary software can be provided to help configure a java bean.
   - The configuration setting of bean can be saved in a persistent storage and restored.
   
-So, JavaBeans are usual Java classes which adhere to certain coding conventions. 
+So, JavaBeans are usual Java classes which adhere to certain coding conventions. It's a standard.
