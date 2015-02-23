@@ -1,0 +1,46 @@
+List	
+    Functionality
+        Essentially a variable-size array;
+        You can usually add/remove items at any arbitrary position;
+        The order of the items is well defined (i.e. you can say what position a given item goes in in the list).
+    Typical uses
+        Most cases where you just need to store or iterate through a "bunch of things" and later iterate through them.
+    
+    
+Set	
+    Functionality
+        Things can be "there or not"— when you add items to a set, there's no notion of how many times the item was added,               and usually no notion of ordering.
+    Typical uses
+        Remembering "which items you've already processed", e.g. when doing a web crawl;
+        Making other yes-no decisions about an item, e.g. "is the item a word of English", "is the item in the database?",               "is the item in this category?" etc.
+        
+        
+Map	
+    Functionality
+        Stores an association or mapping between "keys" and "values"
+    Typical uses
+        Used in cases where you need to say "for a given X, what is the Y"? It is often useful for implementing in-memory                caches or indexes. For example:
+        For a given user ID, what is their cached name/User object?
+        For a given IP address, what is the cached country code?
+        For a given string, how many instances have I seen?
+        
+        
+HashSet is much faster than TreeSet (constant-time versus log-time for most operations like add, remove and contains) but offers no ordering guarantees like TreeSet.
+
+HashSet:
+- class offers constant time performance for the basic operations (add, remove, contains and size).
+- it does not guarantee that the order of elements will remain constant over time
+- iteration performance depends on the initial capacity and the load factor of the HashSet.
+- It's quite safe to accept default load factor but you may want to specify an initial capacity that's about twice the size to which you expect the set to grow.
+
+TreeSet:
+- guarantees log(n) time cost for the basic operations (add, remove and contains)
+- guarantees that elements of set will be sorted (ascending, natural, or the one specified by you via its constructor)
+- doesn't offer any tuning parameters for iteration performance
+- offers a few handy methods to deal with the ordered set like first(), last(), headSet(), and tailSet() etc
+
+Important points:
+- Both guarantee duplicate-free collection of elements
+- It is generally faster to add elements to the HashSet and then convert the collection to a TreeSet for a duplicate-free sorted traversal.
+- None of these implementation are synchronized. That is if multiple threads access a set concurrently, and at least one of the threads modifies the set, it must be synchronized externally.
+- LinkedHashSet is in some sense intermediate between HashSet and TreeSet. Implemented as a hash table with a linked list running through it, however it provides insertion-ordered iteration which is not same as sorted traversal guaranteed by TreeSet.
