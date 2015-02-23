@@ -1,6 +1,9 @@
 Threads
 
 Threads are sometimes called lightweight processes. 
+A Thread is the independent path of execution in a program. Many thread runs concurrently with a program. 
+Some threads are Multithread, This thread refers to two or more thread running simultaneously within a program. 
+The thread in java is created and controlled by the java.lang.Threadclass.
 Both processes and threads provide an execution environment, but creating a new thread requires fewer resources than creating a new process.
 Threads exist within a process — every process has at least one. 
     Threads share the process's resources, including memory and open files.
@@ -61,15 +64,3 @@ If t is a Thread object whose thread is currently executing,
     t.join();    causes the current thread to pause execution until t's thread terminates.
 Overloads of join allow the programmer to specify a waiting period.
 Like sleep, join responds to an interrupt by exiting with an InterruptedException.
-
-
-
-
-
-
-
-
-
-
-
-
