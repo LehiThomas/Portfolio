@@ -13,6 +13,7 @@ There are two basic strategies for using Thread objects to create a concurrent a
     To directly control thread creation and management, simply instantiate Thread each time the application needs to initiate an       asynchronous task.
     To abstract thread management from the rest of your application, pass the application's tasks to an executor.
 
+
 Defining and Starting a Thread
 An application that creates an instance of Thread must provide the code that will run in that thread. 
 There are two ways to do this:
@@ -41,6 +42,7 @@ There are two ways to do this:
 }
 (Notice that both examples invoke Thread.start in order to start the new thread.)
 
+
 Pausing Execution with Sleep
 Thread.sleep causes the current thread to suspend execution for a specified period.
     This is an efficient means of making processor time available to the other threads
@@ -48,11 +50,17 @@ Thread.sleep(4000); //Pause for 4 seconds
 
 
 Interrupts
+An interrupt is an indication to a thread that it should stop what it is doing and do something else.
+A thread sends an interrupt by invoking interrupt on the Thread object for the thread to be interrupted.
+    For the interrupt mechanism to work correctly, the interrupted thread must support its own interruption.
 
 
-
-
-
+Joins
+The join method allows one thread to wait for the completion of another. 
+If t is a Thread object whose thread is currently executing, 
+    t.join();    causes the current thread to pause execution until t's thread terminates.
+Overloads of join allow the programmer to specify a waiting period.
+Like sleep, join responds to an interrupt by exiting with an InterruptedException.
 
 
 
