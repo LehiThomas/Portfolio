@@ -1,0 +1,10 @@
+Updates this week:
+
+First, I went and added the things you wanted for Java Collections which was when you use which collection.
+I did this through notes (Whentousewhat.txt) and I found an awesome image (whentousewhatpic.png).
+
+I started on HTTP Connection but I didn't get very far. My notes and examples I found are in that sandbox.
+
+Most of my work this week was spent on Java Threads and MultiThreading. 
+I took quite a bit of notes from the sources given and I also wrote a bit of code, which can be found
+in the Threads1 folder. That folder is a combination of stuff I found online and some I wrote myself.
