@@ -1,0 +1,56 @@
+Step 1: Create a Class
+
+        package junitfaq;
+      
+        import org.junit.*;
+        import static org.junit.Assert.*;
+ 
+        import java.util.*;
+ 
+        public class SimpleTest {
+        
+        
+Step 2: Write a test method (annotated with @Test) that asserts expected results on the object under test:
+
+        @Test
+        public void testEmptyCollection() {
+          Collection collection = new ArrayList();
+          assertTrue(collection.isEmpty());
+        }
+        
+        
+Step 3: If you are running your JUnit 4 tests with a JUnit 3.x runner, write a suite() method that uses the
+JUnit4TestAdapter class to create a suite containing all of your test methods:   
+
+        public static junit.framework.Test suite() {
+        return new junit.framework.JUnit4TestAdapter(SimpleTest.class);
+        }
+        
+        
+Step 4: Although writing a main() method to run the test is much less important with the advent of IDE runners, it's still possible: 
+
+        public static void main(String args[]) {
+          org.junit.runner.JUnitCore.main("junitfaq.SimpleTest");
+        }
+      }
+        
+        
+        
+Step 5: Run the test:
+
+      - To run the test from the console, type:
+          java org.junit.runner.JUnitCore junitfaq.SimpleTest
+      - To run the test with the test runner used in main(), type:
+          java junitfaq.SimpleTest
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
