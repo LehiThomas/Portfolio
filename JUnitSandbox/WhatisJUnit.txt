@@ -23,6 +23,15 @@ What are the limitations of JUnit?
 	- To obtain the intended benefits from unit testing, rigorous discipline is needed throughout the software development 					process. It is essential to keep careful records not only of the tests that have been performed, but also of 				all changes that have been made to the source code of this or any other unit in the software.
 	
 	
+	
+When should tests be written?
+Tests should be written before the code. Test-first programming is practiced by only writing new code when an automated test is failing.
+
+Good tests tell you how to best design the system for its intended use. They effectively communicate in an executable format how to use the software. They also prevent tendencies to over-build the system based on speculation. When all the tests pass, you know you're done!
+
+Whenever a customer test fails or a bug is reported, first write the necessary unit test(s) to expose the bug(s), then fix them. This makes it almost impossible for that particular bug to resurface later.	
+		
+	
 Can I see an example?
 	import org.junit.*;
  
