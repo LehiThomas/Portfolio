@@ -1,0 +1,64 @@
+What is JUnit?
+	JUnit is a unit testing framework for the Java programming language. A JUnit test fixture is a Java object. 
+What does that mean?
+	JUnit is a simple, open source framework to write and run repeatable tests. It is an instance of the xUnit architecture 		for unit testing frameworks. 
+	JUnit features include:
+		- Assertions for testing expected results
+		- Test fixtures for sharing common test data
+		- Test runners for running tests
+	
+What should a unit test do?
+	It shoud test a single component and be fast. The goal of unit testing is to isolate each part of the program and show 			that the individual parts are correct.[1] A unit test provides a strict, written contract that the piece of code must 	satisfy.
+	
+What are the benefits?
+	- Finds problems early
+	- Facilitates change (Readily available unit tests make it easy for the programmer to check whether a piece of code is 									still working properly.)
+	- Simplifies integration (Unit testing may reduce uncertainty in the units themselves and can be used in a bottom-up 										testing style approach. By testing the parts of a program first and then testing the sum 									of its parts, integration testing becomes much easier.)
+	- Documentation (Unit testing provides a sort of living documentation of the system. Developers looking to learn what 								functionality is provided by a unit, and how to use it, can look at the unit tests to gain a basic 						understanding of the unit's interface (API).)
+	
+What are the limitations of JUnit?
+	- Testing will not catch every error in the program, since it cannot evaluate every execution path in any but the most 					trivial programs.
+	- Unit testing by definition only tests the functionality of the units themselves. Therefore, it will not catch 						integration errors or broader system-level errors
+	- Difficulty of setting up realistic and useful tests.
+	- To obtain the intended benefits from unit testing, rigorous discipline is needed throughout the software development 					process. It is essential to keep careful records not only of the tests that have been performed, but also of 				all changes that have been made to the source code of this or any other unit in the software.
+	
+	
+Can I see an example?
+	import org.junit.*;
+ 
+public class TestFoobar {
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+        // Code executed before the first test method       
+    }
+ 
+    @Before
+    public void setUp() throws Exception {
+        // Code executed before each test    
+    }
+ 
+    @Test
+    public void testOneThing() {
+        // Code that tests one thing
+    }
+ 
+    @Test
+    public void testAnotherThing() {
+        // Code that tests another thing
+    }
+ 
+    @Test
+    public void testSomethingElse() {
+        // Code that tests something else
+    }
+ 
+    @After
+    public void tearDown() throws Exception {
+        // Code executed after each test   
+    }
+ 
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+        // Code executed after the last test method 
+    }
+}
