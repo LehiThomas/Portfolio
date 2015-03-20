@@ -1,0 +1,21 @@
+This week I am trying to make up for last week so I've done quite a bit.
+
+First I worked on Threads.
+I followed a good tutorial on threading. In that one I used threading to find prime numbers.
+Then I did a little project on my own. I used threads in the FizzBuzz test.
+The FizzBuzz is a simple test that asks you to print numbers 1 to 100 and 
+for every number that is divisible by 3 print fizz, every number divisible by 5 print buzz and 
+if the number is divisible by 3 and 5 print fizzbuzz. 
+I created 2 threads to run through this problem. 
+This effectively runs through and does its job but the numbers are out of order since sometimes a thread 
+will finish and start again before the other thread finishes once. So I put the results into a 
+treemap. This sorts them according to the key, which is the number in this case, and then I displayed that map.
+
+
+I also have an HTTP connection example that I created for my sharing video last week.
+I forgot to hand it in last week but it gets the network connection and then pulls 
+a website's information from the internet and displays that. I've spent a lot of time this week 
+on HTTP connections because I've been trying to parse an RSS feed and that requires being connected.
+So I have several examples I can show of getting the HTTP URLconnection. 
+
+
