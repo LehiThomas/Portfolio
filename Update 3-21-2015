@@ -19,3 +19,9 @@ on HTTP connections because I've been trying to parse an RSS feed and that requi
 So I have several examples I can show of getting the HTTP URLconnection. 
 
 
+After HTTP I moved on to Client/Server Sockets. 
+I got a pretty simple program to run. The server socket send out a request and gets a response 
+from the client socket saying hello. Eventually the server times out but if there was more 
+communication it would stay up. 
+Like I said, this is just a simple program but I was pretty happy that I got it working. 
+ 
