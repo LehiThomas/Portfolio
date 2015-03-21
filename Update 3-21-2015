@@ -27,3 +27,36 @@ from the client socket saying hello. Eventually the server times out but if ther
 communication it would stay up. 
 Like I said, this is just a simple program but I was pretty happy that I got it working. 
  
+
+I also added an MVC example to that sandbox.
+In the sandbox is the folder Teny Gasy Be. This is a website that I am currently working on but already has 
+an MVC framework. My model is in the model folder. This holds all of the queries for the site and dos the 
+actual interacting with my database. The views are in the views folder. This is what the client sees when they 
+come to my page. The controller is the index.php file. This is the director of the orchestra and controls 
+the flow of traffic between the model and views. This site is a subdomain of another site but you can view 
+the site at 'malagasydictionary.trippyrodeo.com'. If I had to pick only one of the topics that I am fully sure 
+that I am fluent in, it would be the MVC. 
+
+
+I also posted a new sandbox for the groups app. Our app is BYU Idaho maps. All the work on the app so far has been 
+my own. The app pulls up the BYU Idaho campus on Google maps and gives you the option of selecting a building on campus. 
+When you select a building the map zooms in to that location and puts a red marker on the building you selected. The Google 
+Maps api also has a nice feature that has the layouts of the buildings' room numbers and floors. Richard is currently 
+working on the Activities portion of the app and making great progress with that. When that's done we'll tie it altogether.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
