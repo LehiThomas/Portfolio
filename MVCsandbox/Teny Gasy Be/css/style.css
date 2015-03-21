@@ -1,0 +1,218 @@
+body {
+    font-size: 18px;
+    background-color: whitesmoke;
+}
+footer {
+    height: 100px;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 200px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 300px;
+    width: 0;
+    height: 100%;
+    margin-left: -300px;
+    overflow-y: auto;
+    background: rgb(15, 148, 82);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 200px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -200px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: yellow;
+    font-size: 18px
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: yellow;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+
+/*-------------- My Styles ---------------*/
+#titlePic {
+    width: 100%;
+}
+
+#menu-toggle {
+    width: 100px;
+    color: yellow;
+}
+
+.pagination li {
+     margin-bottom: 5px
+}
+
+.mada_pics_left {
+    width: 65%;
+    float: left;
+    margin-right: 30px;
+}
+
+.mada_pics_right {
+    width: 65%;
+    float: right;
+    margin-left: 30px;
+}
+
+.clear {
+    clear: both;
+}
+
+.mada_section {
+    margin-bottom: 50px;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.tftable {
+    font-size:16px;
+    color:#333333;
+    width:60%;
+    border-width: 2px;
+    border-color: #9dcc7a;
+    border-collapse: collapse;
+}
+
+.tftable th {
+    font-size:18px;
+    background-color:#abd28e;
+    border-width: 2px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #9dcc7a;
+    text-align: center;
+}
+
+.tftable tr {
+    background-color:#ffffff;
+}
+
+.tftable td {
+    font-size:16px;
+    border-width: 2px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #9dcc7a;
+    text-align: center;
+}
+
+.shaded {
+    background-color: #c0c0c0;
+}
+
+.proverbs {
+    list-style-type: none;
+}
+
+.proverbs li {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-style: none none dashed none;
+    border-color: seagreen;
+}
+
+.container-fluid .jumbotron {
+    background: crimson; 
+    border-radius: 0; 
+    padding-left: 8.33333333%;
+}
+
+
+
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 300px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 300px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 0;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
