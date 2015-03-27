@@ -1,0 +1,26 @@
+Topics:
+This week I created one app that combines JSON, HTTP, and threads.
+It can be found in the JSON sandbox under JSONexample.
+I also created a short document talking abou the differences between Sockets and HTTP connections 
+and why you would use Sockets over HTTP.
+
+
+UMLs:
+I have done several UML diagrams for the app my group is working on. 
+The first is a Use Case diagram. It shows how the user can interact with the map 
+and menu button. The map includes a locator button which shows the user's 
+exact location. The menu button includes buildings and activities. By include I mean that 
+those individual aspects of the program would not fully function without the included items. 
+
+I also did a sequence diagram which shows how the processes of the app operate with each other 
+and the order in which they do so. 
+The first is the options task. From the MapsActivity class the showPopup() method is called and grabs the 
+popups xml file and returns that as the main menu. 
+The next sequence is the buildings. When pressed the onMenuItemClick() methid is tripped and calls the getMenu() 
+method. getMenu() grabs the popup2 xml file and sends that all the way back to MapsActivity as the building menu.
+The last sequence I have is the activities sequence. This also goes through onMenuItemClick() but goes to getView(). 
+getView() sends back the activities view.
+
+The last one I did is a state diagram which shows the state of each interactive interface, whether it's 
+enabled or disabled. The group worked on this one together. I did the best I could making this in Visio 
+but I also included the image of the original that we did on the whiteboard after one of our group meetings. 
