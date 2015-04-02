@@ -1,10 +1,33 @@
 Use Case Document - BYU Idaho Maps App
 
 The user will have two immediate choices when he first opens up the app, the map or the menu button. 
-The map includes a locator button that, when pressed, animates the map and centers over your location. 
+The map extends a locator button that, when pressed, animates the map and centers over your location. 
 Users can also move around manually and zoom in or out with their fingers.
 
-The menu button opens a side menu that has a buildings item and an activities item. 
+The menu button opens a side menu that includes a buildings item, an activities item, and both on campus and off campus food. 
+The user then has 4 choices to interact with.
 The activities button changes the view from a map to a list of the activities on campus.
 The buildings button will open a list of the buildings on campus that the user can choose and the 
     map will change to that location.
+The Food in Town button will bring up a list of restaurants in town that are not on campus.
+    When a user selects a restaurant the map will change to that location.
+The Food on Campus button will pull up a new view with a menu of what the Crossroads has to offer
+
+
+Includes vs Extends
+Extend is used when a use case conditionally adds steps to another first class use case.
+For example, imagine "Withdraw Cash" is a use case of an ATM machine. 
+"Assess Fee" would extend Withdraw Cash and describe the conditional "extension point" that 
+is instantiated when the ATM user doesn't bank at the ATM's owning institution. 
+Notice that the basic "Withdraw Cash" use case stands on its own, without the extension.
+
+Include is used to extract use case fragments that are duplicated in multiple use cases. 
+The included use case cannot stand alone and the original use case is not complete without the included one.
+For example, the flow of events that occurs at the beginning of every ATM use case 
+(when the user puts in their ATM card, enters their PIN, and is shown the main menu) would be a 
+good candidate for an include.
+
+"The include relationship is intended for reusing behaviour modeled by another use case, 
+whereas the extend relationship is intended for adding parts to existing use cases as well 
+as for modeling optional system services" 
+(Overgaard and Palmkvist, Use Cases: Patterns and Blueprints. Addison-Wesley, 2004).
