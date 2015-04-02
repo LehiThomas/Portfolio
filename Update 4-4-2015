@@ -1,0 +1,9 @@
+UMLs:
+I edited my Use Case Diagram and Use Case Document trying to add more complexity to both.
+One of the major changes is that I changed one of the includes to an extend. I did this between the map 
+and the locator button. After thinking about it more I felt that it should be extend because the map does 
+not rely on the locator button at all but the locator button adds to the overall functionality of the map.
+
+I also added a class diagram that I did for another course. It is in the myApp folder of the UML sandbox and is simply 
+called classDiagram.png
+
