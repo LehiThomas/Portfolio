@@ -4,6 +4,21 @@ One of the major changes is that I changed one of the includes to an extend. I d
 and the locator button. After thinking about it more I felt that it should be extend because the map does 
 not rely on the locator button at all but the locator button adds to the overall functionality of the map.
 
-I also added a class diagram that I did for another course. It is in the myApp folder of the UML sandbox and is simply 
-called classDiagram.png
+I also added a class diagram that I did for another course. 
+It is in the myApp folder of the UML sandbox and is simply called classDiagram.png
 
+
+TOPICs:
+For some reason I thought that JUnit would be a pain to implement. 
+Probably because I didn't properly understand it. But after working with it it turned out to be easier than I thought.
+So I have a folder in the JUnit sandbox of a simple test.
+The Junit.java file has 2 methods, concatenate, that concatenates 2 strings and multiply, which multiplies 2 numbers.
+ConcatTest.java tests the concatenate method. 
+To do this you first create a new Junit test. Next you set the result of what the method 
+should give you. Finally you use assertEquals to test your result with what the method's. 
+MultiplyTest.java does the same thing for the multiply method.
+The last thing I did was combine the tests into a Test Suite, which just runs all the tests for you at the same time.
+
+I also tried to research further into the Application Controller Pattern but I kept running into the Front Controller Pattern.
+So I did a document about the difference of these 2 patterns. 
+It is really hard to find anything about the ACP.
